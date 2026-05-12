@@ -3,9 +3,9 @@ import { useRef, type CSSProperties } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 
 const cards = [
-  { key: 'a', hue: 'var(--accent-a)' },
-  { key: 'b', hue: 'var(--accent-b)' },
-  { key: 'c', hue: 'var(--accent-c)' },
+  { key: 'a', hue: 'var(--orb-highlight)' },
+  { key: 'b', hue: 'var(--orb-mid)' },
+  { key: 'c', hue: 'var(--orb-soft)' },
 ] as const
 
 export function WorkStrip() {

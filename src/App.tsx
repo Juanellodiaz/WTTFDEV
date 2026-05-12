@@ -1,3 +1,4 @@
+import { AmbientOrbs } from './components/AmbientOrbs'
 import { LanguageProvider } from './context/LanguageContext'
 import { CTA } from './components/CTA'
 import { Footer } from './components/Footer'
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="page">
+        <AmbientOrbs />
         <ScrollProgress />
         <Navbar />
         <main className="main">
