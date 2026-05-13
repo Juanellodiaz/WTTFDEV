@@ -4,9 +4,15 @@ export const translations: Record<
   Locale,
   {
     metaTitle: string
-    nav: { work: string; services: string; platforms: string; contact: string }
-    work: { title: string; subtitle: string; cards: string[] }
     langShort: string
+    nav: {
+      studio: string
+      projects: string
+      philosophy: string
+      craft: string
+      platforms: string
+      contact: string
+    }
     hero: {
       badge: string
       title: string
@@ -14,6 +20,25 @@ export const translations: Record<
       subtitle: string
       ctaPrimary: string
       ctaSecondary: string
+    }
+    intro: {
+      label: string
+      title: string
+      p1: string
+      p2: string
+      quote: string
+    }
+    philosophy: {
+      label: string
+      title: string
+      items: { title: string; body: string }[]
+    }
+    featured: {
+      label: string
+      title: string
+      subtitle: string
+      dueDates: { name: string; body: string }
+      photoSwiper: { name: string; body: string }
     }
     services: {
       label: string
@@ -43,229 +68,323 @@ export const translations: Record<
       footnote: string
     }
     footer: {
-      rights: string
-      built: string
+      line1: string
+      line2: string
     }
   }
 > = {
   en: {
-    metaTitle: 'WTTF Dev — Software studio',
+    metaTitle: 'WTTF DEV — Digital product studio | WTTF Design Studio',
+    langShort: 'ES',
     nav: {
-      work: 'Work',
-      services: 'Services',
-      platforms: 'Platforms',
+      studio: 'Studio',
+      projects: 'Work',
+      philosophy: 'Philosophy',
+      craft: 'Build',
+      platforms: 'Surfaces',
       contact: 'Contact',
     },
-    work: {
-      title: 'Selected work',
-      subtitle: 'Interfaces engineered for clarity and speed.',
-      cards: [
-        'Realtime ops dashboard',
-        'Native reader & sync',
-        'macOS creative utility',
-      ],
-    },
-    langShort: 'ES',
     hero: {
-      badge: 'Modern software · Native & web',
+      badge: 'WTTF Design Studio — digital product division',
       title: 'We craft',
-      titleAccent: 'digital products',
+      titleAccent: 'digital experiences',
       subtitle:
-        'Minimal, fast, and precise experiences across web apps and native iOS, Android, and macOS.',
-      ctaPrimary: 'Start a project',
-      ctaSecondary: 'View capabilities',
+        'Apps, platforms, and tools that feel simple, intuitive, and human — pairing strategic design with modern technology. Identity, connection, and real problems solved with elegance.',
+      ctaPrimary: 'Start a conversation',
+      ctaSecondary: 'Our philosophy',
     },
-    services: {
-      label: 'Services',
-      title: 'Engineering with taste.',
-      subtitle:
-        'From product discovery to polished releases — architecture, UI, and performance as first-class citizens.',
+    intro: {
+      label: 'Who we are',
+      title: 'Design-led engineering.',
+      p1:
+        'WTTF DEV is the digital development arm of WTTF Design Studio — focused on applications and technological experiences built around design, functionality, and obsessive detail.',
+      p2:
+        'Born from a studio specialised in premium branding, we bring the same care for aesthetics, UX, and brand building into software and digital products.',
+      quote: 'The best applications are not only used — they are felt.',
+    },
+    philosophy: {
+      label: 'How we think',
+      title: 'Principles etched into every release.',
       items: [
         {
-          title: 'Web applications',
-          body: 'SPA/PWA stacks, dashboards, and marketing sites tuned for speed, SEO, and accessibility.',
+          title: 'Premium design',
+          body: 'Visual and interaction standards that match high-end brand expectations.',
         },
         {
-          title: 'Native mobile',
-          body: 'iOS and Android apps with platform-native feel, offline-first patterns, and secure APIs.',
+          title: 'Top-tier UX/UI',
+          body: 'Flows and interfaces refined until they feel obvious — never arbitrary.',
         },
         {
-          title: 'macOS desktop',
-          body: 'Utilities and pro tools that respect the Mac — menus, shortcuts, and system integration.',
+          title: 'Integrated branding',
+          body: 'Product and identity move together so every screen reinforces the story.',
         },
         {
-          title: 'Design systems',
-          body: 'Tokens, components, and motion language that scale with your team and brand.',
+          title: 'Modern development',
+          body: 'Solid stacks, performance, and maintainability without sacrificing craft.',
+        },
+        {
+          title: 'Minimal & intuitive',
+          body: 'Complexity tamed; clarity and calm as default states.',
+        },
+        {
+          title: 'Obsessive detail',
+          body: 'Micro-moments, motion, and polish that separate good from memorable.',
+        },
+      ],
+    },
+    featured: {
+      label: 'Featured products',
+      title: 'Shipped with intention.',
+      subtitle:
+        'Tools we design and build to solve everyday friction — fast, clear, and emotionally considered.',
+      dueDates: {
+        name: 'DueDates',
+        body: 'An app to organise dates, open items, and task follow-up with clarity and efficiency.',
+      },
+      photoSwiper: {
+        name: 'PhotoSwiper',
+        body: 'A swipe-inspired visual flow that helps people quickly decide which photos to keep or delete.',
+      },
+    },
+    services: {
+      label: 'What we ship',
+      title: 'From strategy to executable product.',
+      subtitle:
+        'Each build is conceived to work flawlessly while carrying a distinct identity — useful, fast, and visually impeccable.',
+      items: [
+        {
+          title: 'Product & experience design',
+          body: 'Discovery, information architecture, and UI systems aligned with your brand language.',
+        },
+        {
+          title: 'Native & cross-platform apps',
+          body: 'iOS, Android, macOS, and web surfaces with coherent behaviour and premium feel.',
+        },
+        {
+          title: 'Platforms & internal tools',
+          body: 'Dashboards, workflows, and utilities where precision and calm UX matter.',
+        },
+        {
+          title: 'Motion, prototyping & handoff',
+          body: 'Interactive prototypes and motion specs so engineering matches design intent.',
         },
       ],
     },
     platforms: {
-      label: 'Platforms',
-      title: 'One studio. Many surfaces.',
-      subtitle: 'Ship cohesive experiences wherever your users are.',
+      label: 'Surfaces',
+      title: 'Where your product lives.',
+      subtitle: 'One disciplined studio — many touchpoints, one voice.',
       web: 'Web',
       ios: 'iOS',
       android: 'Android',
       macos: 'macOS',
     },
     marquee: {
-      label: 'Stack & craft',
+      label: 'Craft & stack',
       items: [
-        'TypeScript',
+        'Premium UX',
+        'Brand systems',
         'React',
         'Swift',
-        'Kotlin',
         'SwiftUI',
-        'Jetpack',
-        'API design',
-        'Motion',
-        'CI/CD',
+        'Kotlin',
+        'TypeScript',
+        'Motion design',
+        'Design tokens',
         'Accessibility',
         'Performance',
-        'Security',
+        'Product thinking',
       ],
     },
     process: {
       label: 'Process',
-      title: 'Scroll-reactive by design.',
+      title: 'Scroll is part of the interface — so is our process.',
       steps: [
         {
-          title: 'Align',
-          body: 'Goals, constraints, and success metrics — compressed into a crisp product brief.',
+          title: 'Immerse',
+          body: 'Brand, audience, and constraints — distilled into a sharp product narrative.',
         },
         {
           title: 'Shape',
-          body: 'Flows, prototypes, and technical spikes so decisions happen early, not late.',
+          body: 'Prototypes, flows, and technical spikes so decisions land early with confidence.',
         },
         {
           title: 'Build',
-          body: 'Iterative delivery with visible progress, tight feedback loops, and measurable quality.',
+          body: 'Iterative delivery with visible craft: motion, spacing, and behaviour as first-class.',
         },
         {
-          title: 'Launch',
-          body: 'Store submissions, analytics, and hardening — then iterate with real usage data.',
+          title: 'Evolve',
+          body: 'Launch, measure, refine — products that grow with real usage and feedback.',
         },
       ],
     },
     cta: {
-      title: 'Ready when you are.',
-      body: 'Tell us about your product, timeline, and stack preferences. We reply within two business days.',
+      title: 'Let’s build something that feels right.',
+      body:
+        'Tell us about your product, users, and timeline. We respond within two business days with next steps.',
       button: 'hello@wttf.dev',
-      footnote: 'Replace with your real inbox in code or env when you deploy.',
+      footnote: 'Replace with your production email or env variable when you go live.',
     },
     footer: {
-      rights: '© WTTF Dev. All rights reserved.',
-      built: 'Built with React & motion.',
+      line1: '© WTTF DEV — digital division of WTTF Design Studio.',
+      line2: 'Experiences with intention · React & motion',
     },
   },
   es: {
-    metaTitle: 'WTTF Dev — Estudio de software',
+    metaTitle: 'WTTF DEV — Estudio de producto digital | WTTF Design Studio',
+    langShort: 'EN',
     nav: {
-      work: 'Trabajo',
-      services: 'Servicios',
-      platforms: 'Plataformas',
+      studio: 'Estudio',
+      projects: 'Proyectos',
+      philosophy: 'Filosofía',
+      craft: 'Construimos',
+      platforms: 'Superficies',
       contact: 'Contacto',
     },
-    work: {
-      title: 'Trabajo destacado',
-      subtitle: 'Interfaces pensadas para claridad y velocidad.',
-      cards: [
-        'Panel de operaciones en tiempo real',
-        'Lector nativo y sincronización',
-        'Utilidad creativa para macOS',
-      ],
-    },
-    langShort: 'EN',
     hero: {
-      badge: 'Software moderno · Nativo y web',
-      title: 'Diseñamos',
-      titleAccent: 'productos digitales',
+      badge: 'WTTF Design Studio — división de producto digital',
+      title: 'Creamos',
+      titleAccent: 'experiencias digitales',
       subtitle:
-        'Experiencias mínimas, rápidas y precisas en web apps y apps nativas para iOS, Android y macOS.',
-      ctaPrimary: 'Iniciar un proyecto',
-      ctaSecondary: 'Ver capacidades',
+        'Apps, plataformas y herramientas que buscan sentirse simples, intuitivas y humanas — diseño estratégico y tecnología moderna. Identidad, conexión y problemas reales resueltos con elegancia.',
+      ctaPrimary: 'Hablemos',
+      ctaSecondary: 'Nuestra filosofía',
     },
-    services: {
-      label: 'Servicios',
-      title: 'Ingeniería con criterio.',
-      subtitle:
-        'Del descubrimiento al lanzamiento — arquitectura, interfaz y rendimiento como prioridad.',
+    intro: {
+      label: 'Quiénes somos',
+      title: 'Ingeniería con mirada de estudio.',
+      p1:
+        'WTTF DEV es la división de desarrollo digital de WTTF Design Studio, enfocada en crear aplicaciones y experiencias tecnológicas con visión centrada en diseño, funcionalidad y detalle.',
+      p2:
+        'Nace de un estudio especializado en branding premium: la misma obsesión por la estética, la experiencia de usuario y la construcción de marcas, aplicada al software y a los productos digitales.',
+      quote: 'Las mejores aplicaciones no solo se usan: se sienten.',
+    },
+    philosophy: {
+      label: 'Cómo pensamos',
+      title: 'Principios que atraviesan cada entrega.',
       items: [
         {
-          title: 'Aplicaciones web',
-          body: 'SPA/PWA, paneles y sitios optimizados para velocidad, SEO y accesibilidad.',
+          title: 'Diseño premium',
+          body: 'Estándares visuales y de interacción al nivel de marcas de alta gama.',
         },
         {
-          title: 'Móvil nativo',
-          body: 'Apps iOS y Android con sensación nativa, offline y APIs seguras.',
+          title: 'UX/UI de alto nivel',
+          body: 'Flujos e interfaces refinados hasta sentirse evidentes — nunca arbitrarios.',
         },
         {
-          title: 'Escritorio macOS',
-          body: 'Herramientas y utilidades que respetan el Mac: menús, atajos e integración con el sistema.',
+          title: 'Branding integrado',
+          body: 'Producto e identidad van juntos; cada pantalla refuerza la historia.',
         },
         {
-          title: 'Sistemas de diseño',
-          body: 'Tokens, componentes y motion que escalan con tu equipo y tu marca.',
+          title: 'Desarrollo moderno',
+          body: 'Stacks sólidos, rendimiento y mantenibilidad sin renunciar al oficio.',
+        },
+        {
+          title: 'Minimalismo e intuición',
+          body: 'Complejidad domada; claridad y calma como estado por defecto.',
+        },
+        {
+          title: 'Atención obsesiva al detalle',
+          body: 'Micro momentos, motion y pulido que separan lo bueno de lo memorable.',
+        },
+      ],
+    },
+    featured: {
+      label: 'Productos destacados',
+      title: 'Hechos con intención.',
+      subtitle:
+        'Herramientas que diseñamos y construimos para quitar fricción cotidiana — rápidas, claras y emocionalmente cuidadas.',
+      dueDates: {
+        name: 'DueDates',
+        body: 'Una aplicación para organizar fechas, pendientes y seguimiento de tareas con claridad y eficiencia.',
+      },
+      photoSwiper: {
+        name: 'PhotoSwiper',
+        body: 'Una experiencia visual inspirada en el swipe, para decidir rápido qué fotos conservar o eliminar.',
+      },
+    },
+    services: {
+      label: 'Qué construimos',
+      title: 'De la estrategia al producto ejecutable.',
+      subtitle:
+        'Cada pieza se piensa para funcionar impecable y transmitir identidad propia — útil, rápida y visualmente impecable.',
+      items: [
+        {
+          title: 'Diseño de producto y experiencia',
+          body: 'Descubrimiento, arquitectura de información y sistemas de UI alineados con tu marca.',
+        },
+        {
+          title: 'Apps nativas y multiplataforma',
+          body: 'iOS, Android, macOS y web con comportamiento coherente y sensación premium.',
+        },
+        {
+          title: 'Plataformas y herramientas internas',
+          body: 'Paneles, flujos y utilidades donde importan la precisión y una UX serena.',
+        },
+        {
+          title: 'Motion, prototipos y handoff',
+          body: 'Prototipos interactivos y motion specs para que ingeniería respete la intención de diseño.',
         },
       ],
     },
     platforms: {
-      label: 'Plataformas',
-      title: 'Un estudio. Muchas superficies.',
-      subtitle: 'Experiencias coherentes donde estén tus usuarios.',
+      label: 'Superficies',
+      title: 'Donde vive tu producto.',
+      subtitle: 'Un mismo criterio de estudio — muchos puntos de contacto, una sola voz.',
       web: 'Web',
       ios: 'iOS',
       android: 'Android',
       macos: 'macOS',
     },
     marquee: {
-      label: 'Stack y oficio',
+      label: 'Oficio y stack',
       items: [
-        'TypeScript',
+        'UX premium',
+        'Sistemas de marca',
         'React',
         'Swift',
-        'Kotlin',
         'SwiftUI',
-        'Jetpack',
-        'Diseño de APIs',
-        'Motion',
-        'CI/CD',
+        'Kotlin',
+        'TypeScript',
+        'Motion design',
+        'Design tokens',
         'Accesibilidad',
         'Rendimiento',
-        'Seguridad',
+        'Pensamiento de producto',
       ],
     },
     process: {
       label: 'Proceso',
-      title: 'Pensado para responder al scroll.',
+      title: 'El scroll es parte de la interfaz — también nuestro proceso.',
       steps: [
         {
-          title: 'Alinear',
-          body: 'Objetivos, restricciones y métricas — resumidos en un brief claro.',
+          title: 'Sumergirnos',
+          body: 'Marca, audiencia y restricciones — destiladas en una narrativa de producto clara.',
         },
         {
           title: 'Dar forma',
-          body: 'Flujos, prototipos y spikes técnicos para decidir pronto, no tarde.',
+          body: 'Prototipos, flujos y spikes técnicos para decidir pronto, con confianza.',
         },
         {
           title: 'Construir',
-          body: 'Entregas iterativas con avance visible, feedback ajustado y calidad medible.',
+          body: 'Entrega iterativa con oficio visible: motion, ritmo y comportamiento como prioridad.',
         },
         {
-          title: 'Lanzar',
-          body: 'Tiendas, analítica y endurecimiento — luego iterar con datos reales.',
+          title: 'Evolucionar',
+          body: 'Lanzar, medir, refinar — productos que crecen con el uso real y el feedback.',
         },
       ],
     },
     cta: {
-      title: 'Listos cuando tú lo estés.',
-      body: 'Cuéntanos producto, plazos y stack preferido. Respondemos en dos días hábiles.',
+      title: 'Construyamos algo que se sienta bien.',
+      body:
+        'Cuéntanos producto, usuarios y plazos. Respondemos en dos días hábiles con siguientes pasos.',
       button: 'hello@wttf.dev',
-      footnote: 'Sustituye por tu correo real en código o variables de entorno al desplegar.',
+      footnote: 'Sustituye por tu correo de producción o variable de entorno al publicar.',
     },
     footer: {
-      rights: '© WTTF Dev. Todos los derechos reservados.',
-      built: 'Hecho con React y motion.',
+      line1: '© WTTF DEV — división digital de WTTF Design Studio.',
+      line2: 'Experiencias con intención · React y motion',
     },
   },
 }

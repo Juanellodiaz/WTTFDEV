@@ -16,6 +16,7 @@ export function Hero() {
   const meshRotate = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 20])
   const gridOpacity = useTransform(scrollYProgress, [0, 0.25], [0.45, 0.12])
   const hintOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0])
+  const glassRotate = useTransform(scrollYProgress, [0, 0.55], [0, reduce ? 0 : -1.2])
 
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
@@ -27,7 +28,7 @@ export function Hero() {
       <motion.div className="hero__grid" style={{ opacity: gridOpacity }} aria-hidden />
 
       <div className="hero__inner">
-        <motion.div className="hero__glass" style={{ y: yGlass, scale }}>
+        <motion.div className="hero__glass" style={{ y: yGlass, scale, rotateX: glassRotate }}>
           <p className="hero__badge">{t.hero.badge}</p>
           <h1 id="hero-title" className="hero__title">
             <span className="hero__title-line">{t.hero.title}</span>
@@ -38,7 +39,7 @@ export function Hero() {
             <a className="btn btn--primary" href="#contact">
               {t.hero.ctaPrimary}
             </a>
-            <a className="btn btn--ghost" href="#services">
+            <a className="btn btn--ghost" href="#philosophy">
               {t.hero.ctaSecondary}
             </a>
           </div>

@@ -234,6 +234,13 @@ body {
 @media (min-width: 840px) {
   .nav__links {
     display: flex;
+    gap: 0.85rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav__links {
+    gap: 1.15rem;
   }
 }
 
@@ -325,9 +332,12 @@ body {
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
+  perspective: 1400px;
 }
 
 .hero__glass {
+  transform-style: preserve-3d;
+  transform-origin: 50% 40%;
   padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.75rem);
   border-radius: var(--radius-lg);
   border: 1px solid var(--glass-border);
@@ -507,6 +517,11 @@ body {
   letter-spacing: -0.03em;
 }
 
+.section-title--left {
+  text-align: left;
+  max-width: 40rem;
+}
+
 .section-lead {
   margin: 0;
   color: var(--muted);
@@ -515,80 +530,203 @@ body {
   line-height: 1.65;
 }
 
-/* Work */
-.work {
+/* Studio intro */
+.studio {
   position: relative;
   z-index: 2;
-  padding: 5rem var(--page-pad) 4rem;
+  padding: 4.5rem var(--page-pad) 3rem;
 }
 
-.work__row {
-  display: grid;
-  gap: 1.1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  perspective: 900px;
-}
-
-.work__card {
-  position: relative;
-  padding: 1.5rem 1.35rem;
+.studio__panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.5rem);
   border-radius: var(--radius-lg);
   border: 1px solid var(--glass-border);
   background: var(--glass-surface);
-  backdrop-filter: blur(22px) saturate(150%);
-  -webkit-backdrop-filter: blur(22px) saturate(150%);
-  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transform-style: preserve-3d;
+  backdrop-filter: blur(26px) saturate(160%);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.work__card::before {
+.studio__text {
+  margin: 0 0 1.1rem;
+  color: var(--muted);
+  font-weight: var(--fw-light);
+  line-height: 1.7;
+  font-size: clamp(0.98rem, 2vw, 1.06rem);
+}
+
+.studio__quote {
+  margin: 1.75rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--glass-border-soft);
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+  font-style: normal;
+  background: linear-gradient(100deg, var(--cream), var(--peach));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Featured products */
+.featured {
+  position: relative;
+  z-index: 2;
+  padding: 4rem var(--page-pad) 4.5rem;
+  border-top: 1px solid var(--glass-border-soft);
+}
+
+.featured__row {
+  display: grid;
+  gap: 1.15rem;
+  grid-template-columns: 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+  transform-origin: 50% 30%;
+}
+
+@media (min-width: 780px) {
+  .featured__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.featured__card {
+  position: relative;
+  padding: 1.65rem 1.45rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  backdrop-filter: blur(24px) saturate(155%);
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
+  overflow: hidden;
+  min-height: 220px;
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.2);
+}
+
+.featured__card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    500px circle at 12% 0%,
-    color-mix(in srgb, var(--card-accent, var(--peach)) 32%, transparent),
-    transparent 58%
-  );
   opacity: 0.55;
   pointer-events: none;
 }
 
-.work__card-glare {
+.featured__card--coral::before {
+  background: radial-gradient(
+    420px circle at 15% 0%,
+    color-mix(in srgb, var(--coral) 38%, transparent),
+    transparent 60%
+  );
+}
+
+.featured__card--peach::before {
+  background: radial-gradient(
+    420px circle at 85% 100%,
+    color-mix(in srgb, var(--peach) 35%, transparent),
+    transparent 58%
+  );
+}
+
+.featured__card-glare {
   position: absolute;
-  inset: -40% 40% auto -30%;
-  height: 70%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transform: rotate(12deg);
+  inset: -35% 35% auto -25%;
+  height: 65%;
+  background: linear-gradient(118deg, transparent, rgba(255, 255, 255, 0.09), transparent);
+  transform: rotate(11deg);
   pointer-events: none;
 }
 
-.work__card-label {
+.featured__card-name {
   position: relative;
-  margin: 0 0 0.5rem;
-  font-size: 0.7rem;
-  font-weight: var(--fw-light);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.work__card-title {
-  position: relative;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.65rem;
   font-family: var(--font-display);
   font-weight: var(--fw-bold);
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  letter-spacing: -0.03em;
 }
 
-.work__card-body {
+.featured__card-body {
   position: relative;
   margin: 0;
   color: var(--muted);
   font-weight: var(--fw-light);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Philosophy grid */
+.philosophy {
+  position: relative;
+  z-index: 2;
+  padding: 4.5rem var(--page-pad);
+}
+
+.philosophy__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 560px) {
+  .philosophy__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .philosophy__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.philosophy__card {
+  position: relative;
+  padding: 1.35rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.16);
+  transform-style: preserve-3d;
+}
+
+.philosophy__index {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.68rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.philosophy__card-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.philosophy__card-body {
+  margin: 0;
+  color: var(--muted);
+  font-weight: var(--fw-light);
+  font-size: 0.86rem;
   line-height: 1.55;
 }
 

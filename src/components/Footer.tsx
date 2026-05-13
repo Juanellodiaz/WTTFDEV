@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer__row">
-        <p>{t.footer.rights}</p>
-        <p className="footer__meta">{t.footer.built}</p>
+        <p>{t.footer.line1}</p>
+        <p className="footer__meta">{t.footer.line2}</p>
       </div>
     </footer>
   )

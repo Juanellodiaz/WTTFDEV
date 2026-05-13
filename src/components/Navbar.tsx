@@ -2,8 +2,10 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 
 const links = [
-  { id: 'work', href: '#work' },
-  { id: 'services', href: '#services' },
+  { id: 'studio', href: '#studio' },
+  { id: 'projects', href: '#work' },
+  { id: 'philosophy', href: '#philosophy' },
+  { id: 'craft', href: '#services' },
   { id: 'platforms', href: '#platforms' },
   { id: 'contact', href: '#contact' },
 ] as const
@@ -18,7 +20,7 @@ export function Navbar() {
       <motion.div className="nav__scrim" style={{ opacity: scrimOpacity }} aria-hidden />
       <a className="nav__brand" href="#top">
         <span className="nav__mark" aria-hidden />
-        WTTF<span className="nav__brand-muted">Dev</span>
+        WTTF<span className="nav__brand-muted">DEV</span>
       </a>
       <nav className="nav__links" aria-label="Primary">
         {links.map((l) => (

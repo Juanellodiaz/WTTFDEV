@@ -1,15 +1,17 @@
 import { AmbientOrbs } from './components/AmbientOrbs'
-import { LanguageProvider } from './context/LanguageContext'
 import { CTA } from './components/CTA'
+import { FeaturedProjects } from './components/FeaturedProjects'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
+import { Philosophy } from './components/Philosophy'
 import { Platforms } from './components/Platforms'
 import { Process } from './components/Process'
 import { ScrollMarquee } from './components/ScrollMarquee'
 import { ScrollProgress } from './components/ScrollProgress'
 import { Services } from './components/Services'
-import { WorkStrip } from './components/WorkStrip'
+import { StudioIntro } from './components/StudioIntro'
+import { LanguageProvider } from './context/LanguageContext'
 
 export default function App() {
   return (
@@ -20,7 +22,9 @@ export default function App() {
         <Navbar />
         <main className="main">
           <Hero />
-          <WorkStrip />
+          <StudioIntro />
+          <FeaturedProjects />
+          <Philosophy />
           <Services />
           <ScrollMarquee />
           <Platforms />

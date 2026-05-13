@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 
 const container = {
@@ -19,12 +20,18 @@ const item = {
 
 export function Services() {
   const { t } = useLanguage()
+  const ref = useRef<HTMLElement | null>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  })
+  const listShift = useTransform(scrollYProgress, [0, 1], ['-1.5%', '1.5%'])
 
   return (
-    <section className="services" id="services" aria-labelledby="services-title">
+    <section ref={ref} className="services" id="services" aria-labelledby="services-title">
       <div className="section-head section-head--left">
         <p className="eyebrow">{t.services.label}</p>
-        <h2 id="services-title" className="section-title">
+        <h2 id="services-title" className="section-title section-title--left">
           {t.services.title}
         </h2>
         <p className="section-lead">{t.services.subtitle}</p>
@@ -32,6 +39,7 @@ export function Services() {
 
       <motion.ul
         className="services__list"
+        style={{ x: listShift }}
         variants={container}
         initial="hidden"
         whileInView="show"
