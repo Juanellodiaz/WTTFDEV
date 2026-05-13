@@ -441,7 +441,8 @@ body {
 }
 
 .hero__title-line--type {
-  min-height: calc(1.05em * 2);
+  min-height: 1.05em;
+  line-height: inherit;
   word-break: break-word;
 }
 
@@ -471,7 +472,7 @@ body {
 
 .hero__title-accent {
   display: block;
-  margin-top: 0.35em;
+  margin-top: 0.18em;
   font-family: var(--font-accent);
   font-weight: var(--fw-semibold);
   letter-spacing: -0.03em;
