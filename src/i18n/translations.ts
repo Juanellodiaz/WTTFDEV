@@ -198,7 +198,7 @@ export const translations: Record<
     },
     process: {
       label: 'Process',
-      title: 'Scroll is part of the interface — so is our process.',
+      title: 'Design starts with an idea and ends as a real application.',
       steps: [
         {
           title: 'Immerse',
@@ -355,7 +355,7 @@ export const translations: Record<
     },
     process: {
       label: 'Proceso',
-      title: 'El scroll es parte de la interfaz — también nuestro proceso.',
+      title: 'El diseño empieza en la idea y termina en una aplicación real.',
       steps: [
         {
           title: 'Sumergirnos',
