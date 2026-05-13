@@ -1,4 +1,4 @@
-import { OffWhiteMotif } from './components/OffWhiteMotif'
+import { TechBackdrop } from './components/TechBackdrop'
 import { CTA } from './components/CTA'
 import { FeaturedProjects } from './components/FeaturedProjects'
 import { Footer } from './components/Footer'
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="page">
-        <OffWhiteMotif />
+        <TechBackdrop />
         <ScrollProgress />
         <Navbar />
         <main className="main">
