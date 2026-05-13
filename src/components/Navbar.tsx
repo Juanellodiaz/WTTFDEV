@@ -20,7 +20,8 @@ export function Navbar() {
       <motion.div className="nav__scrim" style={{ opacity: scrimOpacity }} aria-hidden />
       <a className="nav__brand" href="#top">
         <span className="nav__mark" aria-hidden />
-        WTTF<span className="nav__brand-muted">DEV</span>
+        <span className="nav__brand-word">WTTF®</span>
+        <span className="nav__brand-muted">DEV</span>
       </a>
       <nav className="nav__links" aria-label="Primary">
         {links.map((l) => (

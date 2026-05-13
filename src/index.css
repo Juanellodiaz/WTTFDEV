@@ -48,6 +48,7 @@
     inset 0 0 0 1px rgba(255, 255, 255, 0.32);
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-brand-mark: 'Helvetica Neue', Helvetica, 'Roboto', Arial, sans-serif;
   --font-display: var(--font-sans);
   --font-body: var(--font-sans);
   --font-accent: var(--font-sans);
@@ -206,17 +207,24 @@ body {
 .nav__brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-weight: var(--fw-semibold);
+  gap: 0.45rem;
   font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text);
   text-decoration: none;
 }
 
+.nav__brand-word {
+  font-family: var(--font-brand-mark);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
 .nav__brand-muted {
+  font-family: var(--font-mono);
   font-weight: 500;
   color: var(--muted);
 }
