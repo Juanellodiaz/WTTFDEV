@@ -94,8 +94,8 @@ export const translations: Record<
         'We design',
         'We develop',
         'We code',
-        'Welcome to the future',
-        'WTTF',
+        'Welcome to the future®',
+        'WTTF®',
       ],
       subtitle:
         'Apps, platforms, and tools that feel simple, intuitive, and human — pairing strategic design with modern technology. Identity, connection, and real problems solved with elegance.',
@@ -261,8 +261,8 @@ export const translations: Record<
         'We design',
         'We develop',
         'We code',
-        'Welcome to the future',
-        'WTTF',
+        'Welcome to the future®',
+        'WTTF®',
       ],
       subtitle:
         'Apps, plataformas y herramientas que buscan sentirse simples, intuitivas y humanas — diseño estratégico y tecnología moderna. Identidad, conexión y problemas reales resueltos con elegancia.',
