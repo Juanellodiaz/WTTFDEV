@@ -56,9 +56,9 @@
   --fw-semibold: 600;
   --fw-regular: 400;
   --page-pad: clamp(1rem, 4vw, 3rem);
-  /* PNG 98×98; hotspot al centro (algunos SO escalan el dibujo) */
-  --cursor-brand: url('/assets/WTTF_icon.png') 49 49, auto;
-  --cursor-brand-pointer: url('/assets/WTTF_icon.png') 49 49, pointer;
+  /* PNG 10×10 (~90% más pequeño que el icono 98×98; hotspot centrado) */
+  --cursor-brand: url('/assets/WTTF_icon_cursor.png') 5 5, auto;
+  --cursor-brand-pointer: url('/assets/WTTF_icon_cursor.png') 5 5, pointer;
 }
 
 html {
