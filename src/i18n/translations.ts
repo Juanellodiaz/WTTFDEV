@@ -37,8 +37,8 @@ export const translations: Record<
       label: string
       title: string
       subtitle: string
-      dueDates: { name: string; body: string }
-      photoSwiper: { name: string; body: string }
+      dueDates: { name: string; body: string; iconAlt: string }
+      photoSwiper: { name: string; body: string; iconAlt: string }
     }
     services: {
       label: string
@@ -140,10 +140,12 @@ export const translations: Record<
       dueDates: {
         name: 'DueDates',
         body: 'An app to organise dates, open items, and task follow-up with clarity and efficiency.',
+        iconAlt: 'DueDates app icon',
       },
       photoSwiper: {
         name: 'PhotoSwiper',
         body: 'A swipe-inspired visual flow that helps people quickly decide which photos to keep or delete.',
+        iconAlt: 'PhotoSwiper app icon',
       },
     },
     services: {
@@ -297,10 +299,12 @@ export const translations: Record<
       dueDates: {
         name: 'DueDates',
         body: 'Una aplicación para organizar fechas, pendientes y seguimiento de tareas con claridad y eficiencia.',
+        iconAlt: 'Icono de la app DueDates',
       },
       photoSwiper: {
         name: 'PhotoSwiper',
         body: 'Una experiencia visual inspirada en el swipe, para decidir rápido qué fotos conservar o eliminar.',
+        iconAlt: 'Icono de la app PhotoSwiper',
       },
     },
     services: {
