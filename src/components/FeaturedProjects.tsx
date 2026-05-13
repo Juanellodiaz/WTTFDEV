@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
+import iconDueDates from '../assets/featured/duedates00.jpg'
+import iconPhotoSwiper from '../assets/featured/icondark.jpg'
 
 const projectsMeta = [
   {
     key: 'dueDates',
-    iconSrc: '/assets/duedates00.jpg',
+    iconSrc: iconDueDates,
     iconKey: 'dueDates' as const,
   },
   {
     key: 'photoSwiper',
-    iconSrc: '/assets/icondark.jpg',
+    iconSrc: iconPhotoSwiper,
     iconKey: 'photoSwiper' as const,
   },
 ] as const
