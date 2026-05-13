@@ -958,9 +958,9 @@ body {
 
 .services__index {
   display: block;
-  width: 18px;
-  height: 18px;
-  margin-top: 0.35rem;
+  width: 9px;
+  height: 9px;
+  margin-top: 0.42rem;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -969,7 +969,7 @@ body {
   margin: 0 0 0.25rem;
   font-family: var(--font-brand-mark);
   font-weight: var(--fw-bold);
-  font-size: 0.68rem;
+  font-size: calc(0.68rem * 1.15);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text);
@@ -979,7 +979,7 @@ body {
   margin: 0;
   color: var(--muted);
   font-weight: var(--fw-regular);
-  font-size: 0.87rem;
+  font-size: calc(0.87rem * 0.85);
   line-height: 1.55;
 }
 

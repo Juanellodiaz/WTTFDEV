@@ -51,8 +51,8 @@ export function Services() {
               className="services__index"
               src="/assets/WTTF_icon.png"
               alt=""
-              width={18}
-              height={18}
+              width={9}
+              height={9}
               decoding="async"
               loading="lazy"
               aria-hidden
