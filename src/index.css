@@ -56,6 +56,9 @@
   --fw-semibold: 600;
   --fw-regular: 400;
   --page-pad: clamp(1rem, 4vw, 3rem);
+  /* PNG 98×98; hotspot al centro (algunos SO escalan el dibujo) */
+  --cursor-brand: url('/assets/WTTF_icon.png') 49 49, auto;
+  --cursor-brand-pointer: url('/assets/WTTF_icon.png') 49 49, pointer;
 }
 
 html {
@@ -73,6 +76,16 @@ body {
   background: var(--surface-0);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  cursor: var(--cursor-brand);
+}
+
+a,
+button,
+[role='button'],
+select,
+summary,
+.btn {
+  cursor: var(--cursor-brand-pointer);
 }
 
 #root {
@@ -303,7 +316,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  cursor: pointer;
+  cursor: var(--cursor-brand-pointer);
   transition:
     background 0.15s ease,
     color 0.15s ease,
