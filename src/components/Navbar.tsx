@@ -19,7 +19,16 @@ export function Navbar() {
     <header className="nav">
       <motion.div className="nav__scrim" style={{ opacity: scrimOpacity }} aria-hidden />
       <a className="nav__brand" href="#top">
-        <span className="nav__mark" aria-hidden />
+        <span className="nav__mark" aria-hidden>
+          <img
+            className="nav__mark-img"
+            src="/assets/WTTF_icon.png"
+            alt=""
+            width={28}
+            height={28}
+            decoding="async"
+          />
+        </span>
         <span className="nav__brand-word">WTTF®</span>
         <span className="nav__brand-muted">DEV</span>
       </a>
