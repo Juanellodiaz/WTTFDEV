@@ -47,7 +47,16 @@ export function Services() {
       >
         {t.services.items.map((s) => (
           <motion.li key={s.title} className="services__item" variants={item}>
-            <span className="services__index" aria-hidden />
+            <img
+              className="services__index"
+              src="/assets/WTTF_icon.png"
+              alt=""
+              width={18}
+              height={18}
+              decoding="async"
+              loading="lazy"
+              aria-hidden
+            />
             <div>
               <h3 className="services__item-title">{s.title}</h3>
               <p className="services__item-body">{s.body}</p>
