@@ -54,8 +54,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = locale === 'es' ? 'es' : 'en'
-    const title = translations[locale].metaTitle
-    document.title = title
   }, [locale])
 
   const value = useMemo(

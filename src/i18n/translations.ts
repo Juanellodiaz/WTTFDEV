@@ -72,6 +72,20 @@ export const translations: Record<
       line1: string
       line2: string
     }
+    branding: {
+      metaTitle: string
+      navDev: string
+      navWork: string
+      navTag: string
+      heroEyebrow: string
+      heroTitle: string
+      heroLead: string
+      pillars: { title: string; body: string }[]
+      behanceLabel: string
+      behanceHint: string
+      pillarsHeading: string
+      footerLine: string
+    }
   }
 > = {
   en: {
@@ -240,6 +254,34 @@ export const translations: Record<
       line1: '© WTTF DEV — digital division of WTTF Design Studio.',
       line2: 'Experiences with intention · React & motion',
     },
+    branding: {
+      metaTitle: 'WTTF® — Premium branding & design studio',
+      navDev: 'Dev',
+      navWork: 'Behance',
+      navTag: 'Design',
+      heroEyebrow: 'WTTF Design Studio',
+      heroTitle: 'Branding, art direction, and product design with uncompromising craft.',
+      heroLead:
+        'We work with brands and teams who want a singular visual voice — identity systems, campaigns, packaging, digital expressions, and the details that make premium feel effortless. WTTF® DEV is our software division; here we shape brands and experiences beyond code.',
+      pillars: [
+        {
+          title: 'Brand identity & systems',
+          body: 'Strategy, narrative, typography, colour, and guidelines that hold across every touchpoint.',
+        },
+        {
+          title: 'Art direction & campaigns',
+          body: 'Photography direction, key visuals, and launch moments with editorial precision.',
+        },
+        {
+          title: 'Product & spatial language',
+          body: 'Interfaces, objects, and environments that stay coherent from screen to shelf.',
+        },
+      ],
+      behanceLabel: 'View work on Behance',
+      behanceHint: 'Real projects and case studies from the studio.',
+      pillarsHeading: 'What we design',
+      footerLine: '© WTTF Design Studio — branding & design.',
+    },
   },
   es: {
     metaTitle: 'WTTF DEV — Estudio de producto digital | WTTF Design Studio',
@@ -406,6 +448,34 @@ export const translations: Record<
     footer: {
       line1: '© WTTF DEV — división digital de WTTF Design Studio.',
       line2: 'Experiencias con intención · React y motion',
+    },
+    branding: {
+      metaTitle: 'WTTF® — Estudio de branding y diseño premium',
+      navDev: 'Dev',
+      navWork: 'Behance',
+      navTag: 'Diseño',
+      heroEyebrow: 'WTTF Design Studio',
+      heroTitle: 'Branding, dirección de arte y diseño de producto con oficio sin concesiones.',
+      heroLead:
+        'Trabajamos con marcas y equipos que buscan una voz visual propia — sistemas de identidad, campañas, packaging, piezas digitales y el detalle que hace que lo premium se sienta natural. WTTF® DEV es nuestra división de software; aquí damos forma a la marca y a la experiencia más allá del código.',
+      pillars: [
+        {
+          title: 'Identidad y sistemas de marca',
+          body: 'Estrategia, narrativa, tipografía, color y manuales que aguantan en cada punto de contacto.',
+        },
+        {
+          title: 'Dirección de arte y campañas',
+          body: 'Dirección fotográfica, key visuals y momentos de lanzamiento con precisión editorial.',
+        },
+        {
+          title: 'Lenguaje de producto y espacio',
+          body: 'Interfaces, objetos y entornos que se leen coherentes de la pantalla al punto de venta.',
+        },
+      ],
+      behanceLabel: 'Ver trabajo en Behance',
+      behanceHint: 'Proyectos reales y casos del estudio.',
+      pillarsHeading: 'Qué diseñamos',
+      footerLine: '© WTTF Design Studio — branding y diseño.',
     },
   },
 }

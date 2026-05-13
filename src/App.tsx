@@ -1,38 +1,13 @@
-import { TechBackdrop } from './components/TechBackdrop'
-import { CTA } from './components/CTA'
-import { FeaturedProjects } from './components/FeaturedProjects'
-import { Footer } from './components/Footer'
-import { Hero } from './components/Hero'
-import { Navbar } from './components/Navbar'
-import { Philosophy } from './components/Philosophy'
-import { Platforms } from './components/Platforms'
-import { Process } from './components/Process'
-import { ScrollMarquee } from './components/ScrollMarquee'
-import { ScrollProgress } from './components/ScrollProgress'
-import { Services } from './components/Services'
-import { StudioIntro } from './components/StudioIntro'
-import { LanguageProvider } from './context/LanguageContext'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { BrandingStudio } from './pages/BrandingStudio'
+import { DevHome } from './pages/DevHome'
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <div className="page">
-        <TechBackdrop />
-        <ScrollProgress />
-        <Navbar />
-        <main className="main">
-          <Hero />
-          <StudioIntro />
-          <FeaturedProjects />
-          <Philosophy />
-          <Services />
-          <ScrollMarquee />
-          <Platforms />
-          <Process />
-          <CTA />
-        </main>
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <Routes>
+      <Route path="/" element={<DevHome />} />
+      <Route path="/studio" element={<BrandingStudio />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
