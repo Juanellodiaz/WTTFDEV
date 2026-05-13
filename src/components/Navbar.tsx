@@ -13,7 +13,7 @@ const links = [
 export function Navbar() {
   const { t, locale, toggleLocale } = useLanguage()
   const { scrollY } = useScroll()
-  const scrimOpacity = useTransform(scrollY, [0, 100], [0, 1])
+  const scrimOpacity = useTransform(scrollY, [0, 160], [0.94, 1])
 
   return (
     <header className="nav">
