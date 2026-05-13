@@ -82,7 +82,7 @@ export const translations: Record<
       projects: 'Work',
       philosophy: 'Philosophy',
       craft: 'Build',
-      platforms: 'Surfaces',
+      platforms: 'Platforms',
       contact: 'Contact',
     },
     hero: {
@@ -182,7 +182,7 @@ export const translations: Record<
       ],
     },
     platforms: {
-      label: 'Surfaces',
+      label: 'Platforms',
       title: 'Where your product lives.',
       subtitle: 'One disciplined studio — many touchpoints, one voice.',
       web: 'Web',
@@ -249,7 +249,7 @@ export const translations: Record<
       projects: 'Proyectos',
       philosophy: 'Filosofía',
       craft: 'Construimos',
-      platforms: 'Superficies',
+      platforms: 'Plataformas',
       contact: 'Contacto',
     },
     hero: {
@@ -349,7 +349,7 @@ export const translations: Record<
       ],
     },
     platforms: {
-      label: 'Superficies',
+      label: 'Plataformas',
       title: 'Donde vive tu producto.',
       subtitle: 'Un mismo criterio de estudio — muchos puntos de contacto, una sola voz.',
       web: 'Web',
