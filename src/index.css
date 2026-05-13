@@ -33,7 +33,7 @@
   --radius-md: 20px;
   --radius-pill: 999px;
   --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif: Georgia, 'Times New Roman', 'Palatino Linotype', serif;
+  --font-accent: 'Roboto', var(--font-stack);
   --font-display: var(--font-stack);
   --font-body: var(--font-stack);
   --fw-bold: 700;
@@ -370,11 +370,11 @@ body {
 
 .hero__title-accent {
   display: block;
-  margin-top: 0.15em;
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  font-size: 0.92em;
+  margin-top: 0.12em;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 0.95em;
   background: linear-gradient(115deg, var(--cream), var(--peach));
   -webkit-background-clip: text;
   background-clip: text;
