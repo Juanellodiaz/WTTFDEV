@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import {
   motion,
   useReducedMotion,
@@ -5,11 +6,24 @@ import {
   useTransform,
 } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
+import heroBannerVideo from '../assets/Background_principal_banner.mp4'
 
 export function Hero() {
   const { t } = useLanguage()
   const reduce = useReducedMotion()
+  const videoRef = useRef<HTMLVideoElement>(null)
   const { scrollYProgress } = useScroll()
+
+  useEffect(() => {
+    if (reduce) return
+    const el = videoRef.current
+    if (!el) return
+    el.defaultMuted = true
+    el.muted = true
+    void el.play().catch(() => {
+      /* autoplay puede bloquearse hasta interacción */
+    })
+  }, [reduce])
   const yGlass = useTransform(scrollYProgress, [0, 0.45], [0, reduce ? 0 : 100])
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, reduce ? 1 : 0.96])
   const glowOpacity = useTransform(scrollYProgress, [0, 0.35], [1, reduce ? 1 : 0.4])
@@ -20,6 +34,23 @@ export function Hero() {
 
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
+      {reduce ? (
+        <div className="hero__video-fallback" aria-hidden />
+      ) : (
+        <div className="hero__video-wrap" aria-hidden>
+          <video
+            ref={videoRef}
+            className="hero__video"
+            src={heroBannerVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+          <div className="hero__video-veil" />
+        </div>
+      )}
       <motion.div
         className="hero__mesh"
         style={{ opacity: glowOpacity, rotate: meshRotate }}
