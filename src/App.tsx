@@ -1,4 +1,4 @@
-import { AmbientOrbs } from './components/AmbientOrbs'
+import { OffWhiteMotif } from './components/OffWhiteMotif'
 import { CTA } from './components/CTA'
 import { FeaturedProjects } from './components/FeaturedProjects'
 import { Footer } from './components/Footer'
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="page">
-        <AmbientOrbs />
+        <OffWhiteMotif />
         <ScrollProgress />
         <Navbar />
         <main className="main">

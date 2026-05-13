@@ -13,10 +13,10 @@ export function Hero() {
   const yGlass = useTransform(scrollYProgress, [0, 0.45], [0, reduce ? 0 : 100])
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, reduce ? 1 : 0.96])
   const glowOpacity = useTransform(scrollYProgress, [0, 0.35], [1, reduce ? 1 : 0.4])
-  const meshRotate = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 20])
+  const meshRotate = useTransform(scrollYProgress, [0, 1], [0, 0])
   const gridOpacity = useTransform(scrollYProgress, [0, 0.25], [0.45, 0.12])
   const hintOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0])
-  const glassRotate = useTransform(scrollYProgress, [0, 0.55], [0, reduce ? 0 : -1.2])
+  const glassRotate = useTransform(scrollYProgress, [0, 0.55], [0, 0])
 
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
