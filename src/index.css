@@ -170,6 +170,7 @@ body {
   height: 2px;
   z-index: 200;
   pointer-events: none;
+  background-color: #c8ef70;
 }
 
 /* Nav */
