@@ -7,9 +7,10 @@ import {
 } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 import heroBannerVideo from '../assets/Background_principal_banner.mp4'
+import { HeroTypewriter } from './HeroTypewriter'
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const reduce = useReducedMotion()
   const videoRef = useRef<HTMLVideoElement>(null)
   const { scrollYProgress } = useScroll()
@@ -24,6 +25,7 @@ export function Hero() {
       /* autoplay puede bloquearse hasta interacción */
     })
   }, [reduce])
+
   const yGlass = useTransform(scrollYProgress, [0, 0.45], [0, reduce ? 0 : 100])
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, reduce ? 1 : 0.96])
   const glowOpacity = useTransform(scrollYProgress, [0, 0.35], [1, reduce ? 1 : 0.4])
@@ -62,7 +64,11 @@ export function Hero() {
         <motion.div className="hero__glass" style={{ y: yGlass, scale, rotateX: glassRotate }}>
           <p className="hero__badge">{t.hero.badge}</p>
           <h1 id="hero-title" className="hero__title">
-            <span className="hero__title-line">{t.hero.title}</span>
+            <HeroTypewriter
+              key={locale}
+              phrases={t.hero.typewriterPhrases}
+              reduce={!!reduce}
+            />
             <span className="hero__title-accent">{t.hero.titleAccent}</span>
           </h1>
           <p className="hero__subtitle">{t.hero.subtitle}</p>

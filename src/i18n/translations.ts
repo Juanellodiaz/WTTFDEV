@@ -17,6 +17,7 @@ export const translations: Record<
       badge: string
       title: string
       titleAccent: string
+      typewriterPhrases: string[]
       subtitle: string
       ctaPrimary: string
       ctaSecondary: string
@@ -88,6 +89,14 @@ export const translations: Record<
       badge: 'WTTF Design Studio — digital product division',
       title: 'We craft',
       titleAccent: 'digital experiences',
+      typewriterPhrases: [
+        'We craft',
+        'We design',
+        'We develop',
+        'We code',
+        'Welcome to the future',
+        'WTTF',
+      ],
       subtitle:
         'Apps, platforms, and tools that feel simple, intuitive, and human — pairing strategic design with modern technology. Identity, connection, and real problems solved with elegance.',
       ctaPrimary: 'Start a conversation',
@@ -247,6 +256,14 @@ export const translations: Record<
       badge: 'WTTF Design Studio — división de producto digital',
       title: 'Creamos',
       titleAccent: 'experiencias digitales',
+      typewriterPhrases: [
+        'We craft',
+        'We design',
+        'We develop',
+        'We code',
+        'Welcome to the future',
+        'WTTF',
+      ],
       subtitle:
         'Apps, plataformas y herramientas que buscan sentirse simples, intuitivas y humanas — diseño estratégico y tecnología moderna. Identidad, conexión y problemas reales resueltos con elegancia.',
       ctaPrimary: 'Hablemos',
